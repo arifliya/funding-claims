@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Your funding claims data
+{% endblock %}
+
+<!-- breadcrum goes here -->
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Year end funding claims</h1>
+    <h2 class="govuk-heading-m">Adult Funding Claim 2018/19</h2>
+
+
+    <table>
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Score</th>
+  </thead>
+  <tbody sheetsu="https://sheetsu.com/apis/v1.0su/75aa6a5d5bb7" sheetsu-limit="3" sheetsu-sheet="Sheet1">
+    <tr>
+      <td>{{id}}</td>
+      <td>{{name}}</td>
+      <td>{{score}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- <form sheetsu="https://sheetsu.com/apis/v1.0su/d438e18f50dc">
+  <input type="text" name="id">
+  <input type="text" name="name">
+  <textarea name="score"></textarea>
+
+  <input type="submit">
+</form> -->
+
+<script src="//load.sheetsu.com"></script>
+
+
+
+
+  </div>
+</div>
+
+
+
+{% endblock %}
