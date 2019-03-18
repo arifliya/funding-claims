@@ -8,41 +8,68 @@ Your funding claims data
 
 {% block content %}
 
+<script src="/public/javascripts/tt.js"></script>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Year end funding claims</h1>
-    <h2 class="govuk-heading-m">Adult Funding Claim 2018/19</h2>
 
 
-    <table>
-  <thead>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Score</th>
+
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Other learning - programme funding</th>
+      <th class="govuk-table__header" scope="col">Year end</th>
+    </tr>
   </thead>
-  <tbody sheetsu="https://sheetsu.com/apis/v1.0su/75aa6a5d5bb7" sheetsu-limit="3" sheetsu-sheet="Sheet1">
-    <tr>
-      <td>{{id}}</td>
-      <td>{{name}}</td>
-      <td>{{score}}</td>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Delivery to date</td>
+      <td class="govuk-table__cell" id="a2"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Forecasted delivery</td>
+      <td class="govuk-table__cell" id="b2"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Update forecasted delivery</td>
+      <td class="govuk-table__cell" ></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Total delivery</td>
+      <td class="govuk-table__cell" id="c2"></td>
     </tr>
   </tbody>
 </table>
 
-
-<!-- <form sheetsu="https://sheetsu.com/apis/v1.0su/d438e18f50dc">
-  <input type="text" name="id">
-  <input type="text" name="name">
-  <textarea name="score"></textarea>
-
-  <input type="submit">
-</form> -->
-
-<script src="//load.sheetsu.com"></script>
-
-
-
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Other learning - learning support</th>
+      <th class="govuk-table__header" scope="col">Year end</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Delivery to date</td>
+      <td class="govuk-table__cell" id="a3"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Forecasted delivery</td>
+      <td class="govuk-table__cell" id="b3"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Update forecasted delivery</td>
+      <td class="govuk-table__cell" ></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Total delivery</td>
+      <td class="govuk-table__cell" id="c3"></td>
+    </tr>
+  </tbody>
+</table>
 
   </div>
 </div>
