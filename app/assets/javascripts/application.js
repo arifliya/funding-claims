@@ -41,40 +41,59 @@ $('#confirmOrView').click(function() {
 // });
 
 $(".inner").blur(function() {
-
   var input = $(this).val();
-
   if($(this).val() == ""){
-     return false;
-   }
-
-   if($(this).val().indexOf('£' ) > -1){
-      return false;
-    }
-
-   if($(this).val() != "£"){
-      $( this ).val( '£' + input );
-    }
-
-
-
+    return false;
+  }
+  if($(this).val().indexOf('£' ) > -1){
+    return false;
+  }
+  if($(this).val() != "£"){
+    $( this ).val( '£' + input );
+  }
 });
 
 
 $(".inner").blur(function() {
-
   var input = $(this).val();
-
   if($(this).val() == ""){
      return false;
    }
-
   if($(this).val().indexOf('.' ) > -1){
      return false;
    }
-
   if($(this).val() != "."){
      $( this ).val( input + '.00' );
    }
+});
 
+
+$('#confirmSubmit').click(function() {
+   if($('#confirmCheckBox').prop('checked')) {
+     location.href='confirmation';
+   } else {
+     $('#errorSummary').removeClass('hidden');
+     $('#errorMessage').addClass('govuk-form-group--error');
+     $('#nationality-error').removeClass('hidden');
+    }
+});
+
+$('#confirmCheckBox').click(function(){
+  if($(this).prop('checked')) {
+    $('#errorSummary').addClass('hidden');
+    $('#errorMessage').removeClass('govuk-form-group--error');
+    $('#nationality-error').addClass('hidden');
+  }
+});
+
+
+var distance = $('.sticky').offset().top;
+var $window = $(window);
+
+$window.scroll(function() {
+    if ( $window.scrollTop() >= distance ) {
+        $('.sticky').addClass('stuck');
+    } else {
+        $('.sticky').removeClass('stuck');
+    }
 });

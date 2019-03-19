@@ -48,3 +48,27 @@ $govuk-global-styles: true;
 .pagination:visited {
   color: $govuk-link-colour;
 }
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.stuck {
+  position: fixed;
+  top: 0px;
+  left: auto;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: govuk-colour("white");
+  opacity: .9;
+}
+
+#errorSummary.hidden {
+  display: none;
+}
+
+#nationality-error.hidden {
+  display: none;
+}
