@@ -57,12 +57,16 @@ $govuk-global-styles: true;
 .stuck {
   position: fixed;
   top: 0px;
-  left: auto;
+  left: 0px;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: govuk-colour("white");
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: govuk-colour("grey-3");
   opacity: .9;
+
+  h2 {
+    @extend .govuk-width-container;
+  }
 }
 
 #errorSummary.hidden {
