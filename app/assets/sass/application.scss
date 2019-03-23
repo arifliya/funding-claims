@@ -54,15 +54,32 @@ $govuk-global-styles: true;
   top: 0;
 }
 
+.sticky-side-bar {
+  @extend .sticky;
+  top: 15px;
+  padding: 12px;
+  background-color: govuk-colour("grey-4");
+
+  a:visited {
+    color: $govuk-link-colour;
+  }
+}
+
 .stuck {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: govuk-colour("grey-3");
+  padding: 10px;
+  background-color: govuk-colour("grey-4");
   opacity: .9;
+  margin-bottom: 10px;
+  // position: fixed;
+  // top: 0px;
+  // left: 0px;
+  // width: 100%;
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+  // background-color: govuk-colour("grey-3");
+  // opacity: .9;
+
+
 
   h2 {
     @extend .govuk-width-container;
