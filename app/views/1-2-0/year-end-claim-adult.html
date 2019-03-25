@@ -14,7 +14,9 @@ Your funding claims data
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">Year end funding claim
-      <span class="govuk-caption-xl">Adult Funding Claim 2018/19</span>
+
+      <!-- <span class="govuk-caption-xl">Adult Funding Claim 2018/19</span> -->
+
     </h1>
   </div>
 </div>
@@ -25,10 +27,11 @@ Your funding claims data
 
     <div class="govuk-grid-column-one-third sticky-side-bar">
       <aside >
-        <ul class="govuk-list">
-          <li><a href="#aeb-np">Adult education budget (non-procured)</a></li>
-          <li> <a href="#ls-p">Learner support (for procured AEB)</a></li>
-          <li><a href="#allb">Advanced learner loans bursary</a></li>
+        <h2 class="govuk-heading-m">Adult Funding Claim 2018/19</h2>
+        <ul id="nav" class="govuk-list">
+          <li><a href="#aeb-np">Adult Education Budget (non-procured)</a></li>
+          <li> <a href="#ls-p">Learner support (procured AEB)</a></li>
+          <li><a href="#allb">Advanced Learner Loans Bursary</a></li>
         </ul>
       </aside>
     </div>
@@ -36,10 +39,13 @@ Your funding claims data
 
     <div class="govuk-grid-column-two-thirds">
 
+      <!-- <div class="sticky">
+      <span class="govuk-heading-m">Adult Funding Claim 2018/19</span>
+      </div> -->
 
-      <div id="aeb-np" class="govuk-grid-row">
+      <div id="aeb-np" class="govuk-grid-row wrapper">
         <div class="govuk-grid-column-full">
-        <div id="stick-header" class="sticky">
+        <div>
           <h2 class="govuk-heading-m">
             Adult education budget (non-procured)
           </h2>
@@ -492,9 +498,9 @@ Your funding claims data
 
       <!-- Adult claim section 2 -->
 
-      <div id="ls-p" class="govuk-grid-row">
+      <div id="ls-p" class="govuk-grid-row wrapper">
         <div class="govuk-grid-column-full">
-          <div id="stick-header" class="sticky">
+          <div >
                 <h2 class="govuk-heading-m">
                   Learner support (for procured AEB)
                 </h2>
@@ -698,9 +704,9 @@ Your funding claims data
 
       <!-- Adult funding claim section 3 -->
 
-      <div id="allb" class="govuk-grid-row">
+      <div id="allb" class="govuk-grid-row wrapper">
           <div class="govuk-grid-column-full">
-            <div id="stick-header" class="sticky">
+            <div>
                 <h2 class="govuk-heading-m">
                   Advanced learner loans bursary
                 </h2>
@@ -1056,5 +1062,7 @@ Your funding claims data
     </div>
   </div>
 </div>
+
+
 
 {% endblock %}

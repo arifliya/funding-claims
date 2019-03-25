@@ -249,13 +249,35 @@ $('#confirmCheckBox').click(function(){
 });
 
 
-var distance = $('.sticky').offset().top;
-var $window = $(window);
+$(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+    if ($(window).width() > 640) {
+      if (windscroll >= 1000) {
+          $('#nav li a').addClass('active');
+          $('.wrapper').each(function(i) {
+              if ($(this).position().top <= windscroll - 0) {
+                  $('#nav li a.active').removeClass('active');
+                  $('#nav li a').eq(i).addClass('active');
+              }
+          });
 
-$window.scroll(function() {
-    if ( $window.scrollTop() >= distance ) {
-        $('.sticky').addClass('stuck');
-    } else {
-        $('.sticky').removeClass('stuck');
+      } else {
+
+          $('#nav').removeClass('active');
+          $('#nav li a.active').removeClass('active');
+          $('#nav li a:first').addClass('active');
+      }
     }
-});
+}).scroll();
+
+
+
+// var $window = $(window);
+// var distance = $('.sticky').offset().top;
+// $window.scroll(function() {
+//   if ( $window.scrollTop() >= distance ) {
+//         $('.sticky').addClass('stuck');
+//     } else {
+//         $('.sticky').removeClass('stuck');
+//     }
+// });
