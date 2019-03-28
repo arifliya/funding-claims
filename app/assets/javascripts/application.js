@@ -186,7 +186,6 @@ $(function() {
       if (fig2 == '' && fig1 == '') {
         $('#total').append('13000');
       }
-
   });
 });
 
@@ -204,6 +203,174 @@ $(function() {
     }
   });
 });
+
+
+// ********************* different interaction ********************** //
+
+
+  $('#updateFigures').click(function(e) {
+
+    var fig1 = $('.fig-edit1b').val();
+    var fig2 = $('.fig-edit2b').val();
+    var one = $('.1b').text();
+    var two = $('.2b').text();
+
+    var total = parseInt(fig1) + parseInt(fig2);
+
+    if (fig1 == '' && fig2 == '') {
+      return false;
+    }
+
+    if (fig1 == '' && fig2 == '') {
+      return false;
+    }
+
+    if (fig1 == '0' && fig2 == '0') {
+      return false;
+    }
+
+    if (fig1 == '') {
+      var total = parseInt(one) + parseInt(fig2);
+      $('.1b').text('9000');
+      $("#total2").text(total);
+    }
+
+    if (fig2 == '') {
+      var total = parseInt(fig1) + parseInt(two);
+      $('.2b').text('10000');
+      $("#total2").text(total);
+    }
+
+    else {
+      // $("#total2").text('');
+      $("#total2").text(total);
+
+      // $(one).append('');
+      // $(two).append('');
+      $('.1b').text(fig1);
+      $('.2b').text(fig2);
+      // $(fig1).append('');
+      // $(fig2).append('');
+    }
+
+    e.preventDefault();
+
+  });
+
+
+// ******************************* different interaction ********************************** //
+
+$(function() {
+  $('.fig-edit1c').on("input", function() {
+    var fig1 = $(this).val();
+    var fig2 = $(".fig-edit2c").val();
+    var total = parseInt(fig1) + parseInt(fig2);
+
+    $("#total3").text('');
+    $("#total3").append(total);
+
+    });
+});
+
+
+$(function() {
+  $('.fig-edit2c').on("input", function() {
+    var fig2 = $(this).val();
+    var fig1 = $(".fig-edit1c").val();
+    var total = parseInt(fig1) + parseInt(fig2);
+
+    $("#total3").text('');
+    $("#total3").append(total);
+
+    });
+});
+
+
+
+
+
+
+    // $('#updateFigures').click(function(e) {
+    //   var fig1 = $('.fig-edit1b').val();
+    //   var fig2 = $(".fig-edit2b").val();
+    //   $('.1b').text('');
+    //   $('.1b').append(fig1);
+    //   var total = parseInt(fig1) + parseInt(fig2);
+    //       $("#total2").text('');
+    //       $("#total2").append(total);
+    //   if (fig1 == '') {
+    //     $('.1b').append('9000');
+    //     var one = $('.1').text();
+    //     var total = parseInt(one) + parseInt(fig2);
+    //     $("#total2").text('');
+    //     $("#total2").append(total);
+    //   }
+    //
+    //   if (fig2 == '' && fig1 == '') {
+    //     $('#total2').append('19000');
+    //   }
+    //
+    //   e.preventDefault();
+    // });
+    //
+    //
+    //
+    // $('#updateFigures').click(function(e) {
+    //   var fig1 = $('.fig-edit1b').val();
+    //   var two = $('.2b').text();
+    //   var total = parseInt(two) + parseInt(fig1);
+    //   $("#total2").text('');
+    //   $("#total2").append(total);
+    //
+    //   var fig2 = $(".fig-edit2b").val();
+    //   if (fig2 == '' && fig1 == '') {
+    //     $('#total2').append('19000');
+    //   }
+    //
+    //   e.preventDefault();
+    // });
+    //
+    //
+    //
+    //   $('updateFigures').click(function() {
+    //     var fig2 = $('.fig-edit2b').val();
+    //       var fig1 = $(".fig-edit1b").val();
+    //       $('.2b').text('');
+    //       $('.2b').append(fig2);
+    //       var total = parseInt(fig1) + parseInt(fig2);
+    //           $("#total2").text('');
+    //           $("#total2").append(total);
+    //       if (fig2 == '') {
+    //         $('.2b').append('10000');
+    //         var two = $('.2b').text();
+    //         var total = parseInt(two) + parseInt(fig1);
+    //         $("#total2").text('');
+    //         $("#total2").append(total);
+    //       }
+    //
+    //       if (fig2 == '' && fig1 == '') {
+    //         $('#total2').append('19000');
+    //       }
+    //   });
+    //
+    //
+    //
+    //   $('#updateFigures').click(function() {
+    //     var fig2 = $('.fig-edit2b').val();
+    //     var one = $('.1b').text();
+    //     var total = parseInt(one) + parseInt(fig2);
+    //     $("#total2").text('');
+    //     $("#total2").append(total);
+    //
+    //     var fig1 = $(".fig-edit1b").val();
+    //     if (fig2 == '' && fig1 == '') {
+    //       $('#total2').append('19000');
+    //     }
+    //   });
+
+
+
+
 
 // // // // // // //
 // var one = $('.1').text();
