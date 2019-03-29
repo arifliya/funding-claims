@@ -419,7 +419,7 @@ $('#confirmCheckBox').click(function(){
 $(window).scroll(function() {
     var windscroll = $(window).scrollTop();
     if ($(window).width() > 640) {
-      if (windscroll >= 1000) {
+      if (windscroll >= 500) {
           $('#nav li a').addClass('active');
           $('.wrapper').each(function(i) {
               if ($(this).position().top <= windscroll - 0) {
