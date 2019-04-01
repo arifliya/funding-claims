@@ -14,10 +14,10 @@ Your funding claims data
     <h1 class="govuk-heading-xl">  Year end funding claim
       <!-- <span class="govuk-caption-xl">16 - 19 Funding Claim 2018/19</span> -->
     </h1>
-
+    <a href="#" id="backLink" class="govuk-back-link">Back</a>
   </div>
 </div>
-
+<br>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third sticky-side-bar">
     <aside >
@@ -264,6 +264,16 @@ Your funding claims data
 
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell" scope="row">Delivered so far</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric remove-right-padding">£1000</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row">Exceptional adjustments</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric remove-right-padding"><input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text"></td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row">Total delivery</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric remove-right-padding">£1000</td>
               </tr>
 
@@ -720,29 +730,38 @@ Your funding claims data
 
         <div id="con" class="wrapper">
 
-        <h2 class="govuk-heading-m">
-          Condition of funding removal
-        </h2>
+          <h2 class="govuk-heading-m">
+            Condition of funding removal
+          </h2>
 
-        <table class="govuk-table">
-
-
-
-          <tbody class="govuk-table__body">
-
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell" scope="row">Condition of funding removal</td>
-              <td class="govuk-table__cell govuk-table__cell--numeric">-£5000</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th class="govuk-table__header" scope="row">Total 16-19 funding claim</th>
-              <td class="govuk-table__cell govuk-table__cell--numeric">£37,750.00</td>
-            </tr>
+          <table class="govuk-table">
 
 
-          </tbody>
-        </table>
-      </div>
+
+            <tbody class="govuk-table__body">
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row">Condition of funding removal</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">-£5000</td>
+              </tr>
+              <!-- <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Total 16-19 funding claim</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£37,750.00</td>
+              </tr> -->
+
+
+            </tbody>
+          </table>
+
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header govuk-!-font-size-24" scope="row">Total 16-19 funding claim</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£37,750.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
 
 

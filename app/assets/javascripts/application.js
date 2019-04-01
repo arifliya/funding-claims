@@ -22,6 +22,11 @@ $('#confirmOrView').click(function() {
 });
 
 
+$("#backLink").click(function(event) {
+    event.preventDefault();
+    history.back(1);
+});
+
 
 // $(".inner").blur(function() {
 //   var input = $(this).val();
