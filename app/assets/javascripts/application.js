@@ -444,12 +444,12 @@ $(window).scroll(function() {
 
 
 
-// var $window = $(window);
-// var distance = $('.sticky').offset().top;
-// $window.scroll(function() {
-//   if ( $window.scrollTop() >= distance ) {
-//         $('.sticky').addClass('stuck');
-//     } else {
-//         $('.sticky').removeClass('stuck');
-//     }
-// });
+var $window = $(window);
+var distance = $('.sticky').offset().top;
+$window.scroll(function() {
+  if ( $window.scrollTop() >= distance ) {
+        $('.sticky').addClass('stuck');
+    } else {
+        $('.sticky').removeClass('stuck');
+    }
+});
